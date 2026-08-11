@@ -875,7 +875,12 @@ export default function Home() {
                     </div>
                     <div className="card-body">
                       <div className="card-location"><span>⌖</span> {item.place}</div>
-                      <h3 lang={isArabic ? "ar" : "en"}>{item.title}</h3>
+                      <h3
+                        className={isArabic && listing.id === 1 ? "wooden-hut-title" : undefined}
+                        lang={isArabic ? "ar" : "en"}
+                      >
+                        {item.title}
+                      </h3>
                       <p className="card-description">{item.description}</p>
                       <div className="facts">
                         <span><b>{listing.rooms}</b> {t.room}</span>
@@ -953,7 +958,13 @@ export default function Home() {
             <div className="modal-image"><img src={selected.image} alt={t.modalImage} /><span>{t.modalImageNote}</span></div>
             <div className="modal-content">
               <p className="modal-place">⌖ {localized(selected).place}</p>
-              <h2 id="modal-title" lang={isArabic ? "ar" : "en"}>{localized(selected).title}</h2>
+              <h2
+                className={isArabic && selected.id === 1 ? "wooden-hut-title" : undefined}
+                id="modal-title"
+                lang={isArabic ? "ar" : "en"}
+              >
+                {localized(selected).title}
+              </h2>
               <div className={`modal-confidence ${selected.confidence === "موثّق المصدر" ? "verified" : "confirm"}`}>{selected.confidence === "موثّق المصدر" ? "✓" : "!"} {selected.confidence === "موثّق المصدر" ? t.verified : t.confirmPrice} · {t.reviewedOn} {isArabic ? selected.checked : "August 11, 2026"}</div>
               <p className="modal-description">{localized(selected).description}</p>
               <div className="modal-facts"><span><b>{selected.rooms}</b> {t.room}</span><span><b>{selected.baths}</b> {t.bath}</span><span>{t.upTo} <b>{selected.guests}</b> {t.guest}</span></div>
