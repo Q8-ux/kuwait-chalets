@@ -14,6 +14,7 @@ https://q8-ux.github.io/kuwait-chalets/
 - Search, region and amenity filters, sorting and approximate map view
 - Favorites stored locally in the browser
 - Side-by-side comparison for up to three chalets
+- Complete bilingual booking-request flow with dates, guests, contact details and a request reference
 - Source-confidence labels and direct links to original public listings
 - Responsive desktop and mobile layout
 
