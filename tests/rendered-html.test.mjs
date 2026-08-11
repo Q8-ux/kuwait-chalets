@@ -42,7 +42,7 @@ test("keeps the reviewed Arabic chalet copy", async () => {
   assert.match(pageSource, /title: "شاليه الكوخ الخشبي"/);
   assert.match(
     pageSource,
-    /<h3 lang=\{isArabic \? "ar" : "en"\}>\{item\.title\}<\/h3>/,
+    /className=\{isArabic && listing\.id === 1 \? "wooden-hut-title" : undefined\}/,
   );
   assert.doesNotMatch(
     pageSource,
