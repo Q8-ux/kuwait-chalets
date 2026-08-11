@@ -259,6 +259,7 @@ img { display: block; max-width: 100%; }
 .card-body { padding: 17px; }
 .card-location { color: var(--teal); font-size: 9px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-body h3 { min-height: 47px; margin: 8px 0 6px; font-size: 16px; line-height: 1.55; letter-spacing: -.02em; }
+.wooden-hut-title { font-family: Tahoma, Arial, "Noto Sans Arabic", sans-serif; font-weight: 800; letter-spacing: 0; }
 .card-description { height: 40px; margin: 0 0 13px; overflow: hidden; color: var(--muted); font-size: 9px; line-height: 1.85; }
 .facts { display: flex; align-items: center; gap: 7px; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: 8px; white-space: nowrap; }
 .facts b { color: var(--ink); font-size: 10px; }
