@@ -28,6 +28,30 @@ type Listing = {
   featured?: boolean;
 };
 
+type BookingForm = {
+  arrival: string;
+  departure: string;
+  adults: number;
+  children: number;
+  fullName: string;
+  phone: string;
+  email: string;
+  notes: string;
+  agreed: boolean;
+};
+
+const emptyBookingForm: BookingForm = {
+  arrival: "",
+  departure: "",
+  adults: 2,
+  children: 0,
+  fullName: "",
+  phone: "",
+  email: "",
+  notes: "",
+  agreed: false,
+};
+
 const listings: Listing[] = [
   {
     id: 1,
@@ -462,6 +486,7 @@ const ui = {
     modalImage: "صورة تعبيرية لشاليه ساحلي", modalImageNote: "صورة تعبيرية وليست صورة الإعلان", reviewedOn: "راجعناه", mentionedAmenities: "المزايا المذكورة", source: "المصدر", sourceCaveat: "قد تختلف الأسعار والتوافر والشروط عند فتح المصدر.", openOriginal: "فتح الإعلان الأصلي ↗", close: "إغلاق",
     compareList: "قائمة المقارنة", removeCompare: "إزالة من المقارنة", ofThree: "من 3", chooseAnother: "اختر شاليهًا آخر", readyCompare: "جاهزة للمقارنة", compareNow: "قارن الآن", clear: "مسح", compareEyebrow: "قرار أسرع وأوضح", compareHeading: "قارن الشاليهات جنبًا إلى جنب", compareIntro: "المعلومات أدناه مختصرة من الإعلانات العامة؛ افتح المصدر قبل اتخاذ قرار الحجز.", chalet: "الشاليه", displayedPrice: "السعر المعلن", roomsBaths: "الغرف / الحمامات", capacity: "الاستيعاب", poolSea: "مسبح / بحر",
     launch: "نسخة إطلاق تجريبية", ownerEyebrow: "إضافة إعلان موثوق", ownerModalHeading: "جهّز شاليهك للعرض على موج", ownerModalText: "نحتاج بيانات واضحة تمنح المستأجر ثقة أكبر. لا يوجد استقبال طلبات آلي في هذه النسخة بعد.", ownership: "إثبات الملكية أو التفويض", ownershipText: "لحماية الضيوف ومنع الإعلانات المنسوخة.", photos: "صور أصلية ومواصفات دقيقة", photosText: "السعة، الغرف، المرافق وقواعد الاستخدام.", calendar: "أسعار وتقويم وسياسة إلغاء", calendarText: "لإظهار السعر الحقيقي قبل دفع العربون.", previewListing: "استعرض شكل الإعلان",
+    bookNow: "احجز الآن", bookingEyebrow: "طلب حجز آمن", bookingHeading: "أكمل بيانات إقامتك", bookingIntro: "أنشئ طلب توافر متكامل ثم تابع التأكيد مع المصدر الأصلي. لا يتم تحصيل أي مبلغ هنا.", bookingSteps: "التواريخ · الضيوف · التواصل", stayDetails: "تفاصيل الإقامة", contactDetails: "بيانات التواصل", checkIn: "تاريخ الوصول", checkOut: "تاريخ المغادرة", adults: "البالغون", children: "الأطفال", maxCapacity: "الحد الأقصى", fullName: "الاسم الكامل", phone: "رقم الهاتف", emailOptional: "البريد الإلكتروني (اختياري)", specialRequests: "طلبات خاصة (اختياري)", specialPlaceholder: "مثال: سرير طفل، وقت وصول متأخر أو مناسبة عائلية", bookingSummary: "ملخص الطلب", stayLength: "مدة الإقامة", nights: "ليالٍ", oneNight: "ليلة", listedPrice: "السعر المعلن", estimatedTotal: "تقدير الإقامة", finalPriceNote: "السعر النهائي والتوفر يؤكدهما المعلن قبل الدفع.", privacyNote: "بياناتك لا تُحفظ على الموقع ولا تُرسل لأي طرف في هذه الخطوة.", agreement: "أوافق على مراجعة السعر والتوفر وهوية المعلن والعقد وسياسة الإلغاء قبل دفع أي عربون.", createRequest: "إنشاء طلب الحجز", dateError: "اختر تاريخ مغادرة بعد تاريخ الوصول.", capacityError: "عدد الضيوف يتجاوز سعة هذا الشاليه.", requiredError: "أكمل الحقول المطلوبة ووافق على تعليمات الحجز.", bookingSuccess: "تم تجهيز طلبك", bookingSuccessText: "هذا الطلب غير مؤكد بعد. استخدم المرجع أدناه وتابع مع المصدر الأصلي للتحقق من التوفر والسعر.", bookingReference: "مرجع الطلب", copyRequest: "نسخ ملخص الطلب", copied: "تم نسخ ملخص الطلب", continueSource: "متابعة التأكيد مع المصدر ↗", closeRequest: "إغلاق الطلب", requestPrepared: "تم تجهيز طلب الحجز", noPayment: "لا دفع الآن", perStayEstimate: "تقديري بحسب عدد الليالي", totalGuests: "إجمالي الضيوف",
     saved: "حُفظ في المفضلة", removed: "أزيل من المفضلة", compareLimit: "يمكنك مقارنة 3 شاليهات كحد أقصى", addAnother: "أضف شاليهًا آخر لبدء المقارنة", addedCompare: "أُضيف إلى المقارنة",
   },
   en: {
@@ -482,6 +507,7 @@ const ui = {
     modalImage: "Illustrative coastal chalet", modalImageNote: "Illustrative image — not the listing’s photo", reviewedOn: "reviewed", mentionedAmenities: "Listed amenities", source: "Source", sourceCaveat: "Prices, availability and conditions may differ when you open the source.", openOriginal: "Open original listing ↗", close: "Close",
     compareList: "Comparison list", removeCompare: "Remove from comparison", ofThree: "of 3", chooseAnother: "Choose another chalet", readyCompare: "Ready to compare", compareNow: "Compare now", clear: "Clear", compareEyebrow: "A faster, clearer decision", compareHeading: "Compare chalets side by side", compareIntro: "The information below is summarized from public listings; open the source before booking.", chalet: "Chalet", displayedPrice: "Listed price", roomsBaths: "Rooms / baths", capacity: "Capacity", poolSea: "Pool / sea",
     launch: "Launch preview", ownerEyebrow: "Add a trusted listing", ownerModalHeading: "Prepare your chalet for Mawj", ownerModalText: "Clear details build guest confidence. Automated listing submissions are not enabled in this preview yet.", ownership: "Ownership or authorization proof", ownershipText: "Protects guests and prevents copied listings.", photos: "Original photos and accurate details", photosText: "Capacity, rooms, amenities and house rules.", calendar: "Pricing, calendar and cancellation", calendarText: "Shows the real price before any deposit is paid.", previewListing: "Preview a listing",
+    bookNow: "Book now", bookingEyebrow: "Safe booking request", bookingHeading: "Complete your stay details", bookingIntro: "Create a complete availability request, then confirm it with the original source. No payment is collected here.", bookingSteps: "Dates · guests · contact", stayDetails: "Stay details", contactDetails: "Contact details", checkIn: "Check-in date", checkOut: "Check-out date", adults: "Adults", children: "Children", maxCapacity: "Maximum capacity", fullName: "Full name", phone: "Phone number", emailOptional: "Email (optional)", specialRequests: "Special requests (optional)", specialPlaceholder: "Example: baby cot, late arrival or family occasion", bookingSummary: "Request summary", stayLength: "Stay length", nights: "nights", oneNight: "night", listedPrice: "Listed price", estimatedTotal: "Stay estimate", finalPriceNote: "The advertiser confirms final price and availability before payment.", privacyNote: "Your details are not stored on this site or sent to any party at this step.", agreement: "I agree to verify the price, availability, advertiser identity, contract and cancellation policy before paying any deposit.", createRequest: "Create booking request", dateError: "Choose a check-out date after check-in.", capacityError: "The guest count exceeds this chalet’s capacity.", requiredError: "Complete the required fields and accept the booking guidance.", bookingSuccess: "Your request is ready", bookingSuccessText: "This booking is not confirmed yet. Use the reference below and continue with the original source to verify availability and price.", bookingReference: "Request reference", copyRequest: "Copy request summary", copied: "Request summary copied", continueSource: "Continue with source ↗", closeRequest: "Close request", requestPrepared: "Booking request prepared", noPayment: "No payment now", perStayEstimate: "Estimated by number of nights", totalGuests: "Total guests",
     saved: "Saved to favorites", removed: "Removed from favorites", compareLimit: "You can compare up to 3 chalets", addAnother: "Add another chalet to start comparing", addedCompare: "Added to comparison",
   },
 } as const;
@@ -504,8 +530,16 @@ export default function Home() {
   const [ownerOpen, setOwnerOpen] = useState(false);
   const [toast, setToast] = useState("");
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [searchArrival, setSearchArrival] = useState("");
+  const [searchDeparture, setSearchDeparture] = useState("");
+  const [searchGuests, setSearchGuests] = useState(8);
+  const [bookingListing, setBookingListing] = useState<Listing | null>(null);
+  const [bookingForm, setBookingForm] = useState<BookingForm>(emptyBookingForm);
+  const [bookingError, setBookingError] = useState("");
+  const [bookingReference, setBookingReference] = useState("");
   const isArabic = language === "ar";
   const t = ui[language];
+  const minDate = new Date(Date.now() - new Date().getTimezoneOffset() * 60_000).toISOString().slice(0, 10);
   const localized = (listing: Listing) => isArabic ? {
     title: listing.title,
     place: listing.place,
@@ -535,6 +569,7 @@ export default function Home() {
         setSelected(null);
         setCompareOpen(false);
         setOwnerOpen(false);
+        setBookingListing(null);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -581,6 +616,17 @@ export default function Home() {
     [compare],
   );
 
+  const bookingNights = useMemo(() => {
+    if (!bookingForm.arrival || !bookingForm.departure) return 0;
+    const arrival = new Date(`${bookingForm.arrival}T00:00:00`).getTime();
+    const departure = new Date(`${bookingForm.departure}T00:00:00`).getTime();
+    return Math.max(0, Math.round((departure - arrival) / 86_400_000));
+  }, [bookingForm.arrival, bookingForm.departure]);
+
+  const bookingEstimate = bookingListing?.price && bookingListing.category === "يومي" && bookingNights > 0
+    ? bookingListing.price * bookingNights
+    : null;
+
   const toggleFavorite = (id: number) => {
     setFavorites((current) => {
       const next = current.includes(id)
@@ -602,6 +648,55 @@ export default function Home() {
       setToast(current.length === 0 ? t.addAnother : t.addedCompare);
       return [...current, id];
     });
+  };
+
+  const openBooking = (listing: Listing) => {
+    setSelected(null);
+    setBookingListing(listing);
+    setBookingReference("");
+    setBookingError("");
+    setBookingForm({
+      ...emptyBookingForm,
+      arrival: searchArrival,
+      departure: searchDeparture,
+      adults: searchArrival || searchDeparture ? Math.min(searchGuests, listing.guests) : 2,
+    });
+  };
+
+  const submitBooking = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!bookingListing) return;
+    if (!bookingForm.arrival || !bookingForm.departure || !bookingForm.fullName.trim() || bookingForm.phone.trim().length < 8 || !bookingForm.agreed) {
+      setBookingError(t.requiredError);
+      return;
+    }
+    if (bookingNights < 1) {
+      setBookingError(t.dateError);
+      return;
+    }
+    if (bookingForm.adults + bookingForm.children > bookingListing.guests) {
+      setBookingError(t.capacityError);
+      return;
+    }
+    setBookingError("");
+    setBookingReference(`MWJ-${bookingListing.id}-${Date.now().toString(36).slice(-6).toUpperCase()}`);
+  };
+
+  const bookingSummaryText = bookingListing ? [
+    `${t.bookingReference}: ${bookingReference}`,
+    `${t.chalet}: ${localized(bookingListing).title}`,
+    `${t.checkIn}: ${bookingForm.arrival}`,
+    `${t.checkOut}: ${bookingForm.departure}`,
+    `${t.totalGuests}: ${bookingForm.adults + bookingForm.children}`,
+    `${t.fullName}: ${bookingForm.fullName}`,
+    `${t.phone}: ${bookingForm.phone}`,
+    `${t.listedPrice}: ${localized(bookingListing).priceLabel} — ${localized(bookingListing).period}`,
+  ].join("\n") : "";
+
+  const copyBookingSummary = async () => {
+    if (!bookingSummaryText) return;
+    await navigator.clipboard.writeText(bookingSummaryText);
+    setToast(t.copied);
   };
 
   const submitSearch = (event: FormEvent) => {
@@ -667,15 +762,19 @@ export default function Home() {
         </label>
         <label className="search-field">
           <span>{t.arrival}</span>
-          <input type="date" aria-label={t.arrival} />
+          <input type="date" min={minDate} value={searchArrival} onChange={(event) => {
+            const value = event.target.value;
+            setSearchArrival(value);
+            if (searchDeparture && searchDeparture <= value) setSearchDeparture("");
+          }} aria-label={t.arrival} />
         </label>
         <label className="search-field">
           <span>{t.departure}</span>
-          <input type="date" aria-label={t.departure} />
+          <input type="date" min={searchArrival || minDate} value={searchDeparture} onChange={(event) => setSearchDeparture(event.target.value)} aria-label={t.departure} />
         </label>
         <label className="search-field guests-field">
           <span>{t.guests}</span>
-          <select aria-label={t.guests} defaultValue="8">
+          <select aria-label={t.guests} value={searchGuests} onChange={(event) => setSearchGuests(Number(event.target.value))}>
             <option value="4">{t.upTo4}</option>
             <option value="8">{t.upTo8}</option>
             <option value="12">{t.upTo12}</option>
@@ -794,7 +893,10 @@ export default function Home() {
                       </button>
                       <div className="card-footer">
                         <div className="price"><b>{item.priceLabel}</b><span>{item.period}</span></div>
-                        <button onClick={() => setSelected(listing)}>{t.details} <span aria-hidden="true">{t.arrow}</span></button>
+                        <div className="card-actions">
+                          <button className="card-details-button" onClick={() => setSelected(listing)}>{t.details}</button>
+                          <button className="card-book-button" onClick={() => openBooking(listing)}>{t.bookNow} <span aria-hidden="true">{t.arrow}</span></button>
+                        </div>
                       </div>
                     </div>
                   </article>;
@@ -858,8 +960,105 @@ export default function Home() {
               <h3>{t.mentionedAmenities}</h3>
               <div className="modal-amenities">{localized(selected).amenities.map((item) => <span key={item}>✓ {item}</span>)}</div>
               <div className="source-box"><span>{t.source}</span><b>{selected.source}</b><p>{t.sourceCaveat}</p></div>
-              <div className="modal-price-row"><div><b>{localized(selected).priceLabel}</b><span>{localized(selected).period}</span></div><a href={selected.sourceUrl} target="_blank" rel="noreferrer">{t.openOriginal}</a></div>
+              <div className="modal-price-row">
+                <div><b>{localized(selected).priceLabel}</b><span>{localized(selected).period}</span></div>
+                <div className="modal-price-actions">
+                  <button onClick={() => openBooking(selected)}>{t.bookNow}</button>
+                  <a href={selected.sourceUrl} target="_blank" rel="noreferrer">{t.openOriginal}</a>
+                </div>
+              </div>
             </div>
+          </section>
+        </div>
+      )}
+
+      {bookingListing && (
+        <div className="modal-backdrop booking-backdrop" role="presentation" onMouseDown={(event) => { if (event.currentTarget === event.target) setBookingListing(null); }}>
+          <section className="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+            <button className="modal-close" onClick={() => setBookingListing(null)} aria-label={t.close}>×</button>
+            {!bookingReference ? (
+              <>
+                <header className="booking-header">
+                  <div>
+                    <p className="eyebrow">{t.bookingEyebrow}</p>
+                    <h2 id="booking-title">{t.bookingHeading}</h2>
+                    <p>{t.bookingIntro}</p>
+                  </div>
+                  <span><b>✓</b>{t.noPayment}</span>
+                </header>
+
+                <div className="booking-property">
+                  <img src={bookingListing.image} alt="" />
+                  <div><b>{localized(bookingListing).title}</b><span>⌖ {localized(bookingListing).place}</span></div>
+                  <small>{t.maxCapacity}: {bookingListing.guests} {t.guest}</small>
+                </div>
+
+                <form className="booking-layout" onSubmit={submitBooking} noValidate>
+                  <div className="booking-form-pane">
+                    <div className="booking-progress" aria-label={t.bookingSteps}>
+                      <span><b>1</b>{t.checkIn}</span><i /><span><b>2</b>{t.guests}</span><i /><span><b>3</b>{t.contactDetails}</span>
+                    </div>
+
+                    <fieldset>
+                      <legend>{t.stayDetails}</legend>
+                      <div className="booking-field-grid">
+                        <label><span>{t.checkIn} *</span><input type="date" min={minDate} value={bookingForm.arrival} onChange={(event) => {
+                          const value = event.target.value;
+                          setBookingForm((current) => ({ ...current, arrival: value, departure: current.departure && current.departure <= value ? "" : current.departure }));
+                          setBookingError("");
+                        }} required /></label>
+                        <label><span>{t.checkOut} *</span><input type="date" min={bookingForm.arrival || minDate} value={bookingForm.departure} onChange={(event) => { setBookingForm((current) => ({ ...current, departure: event.target.value })); setBookingError(""); }} required /></label>
+                        <label><span>{t.adults} *</span><input type="number" min="1" max={bookingListing.guests} value={bookingForm.adults} onChange={(event) => { setBookingForm((current) => ({ ...current, adults: Number(event.target.value) })); setBookingError(""); }} required /></label>
+                        <label><span>{t.children}</span><input type="number" min="0" max={bookingListing.guests} value={bookingForm.children} onChange={(event) => { setBookingForm((current) => ({ ...current, children: Number(event.target.value) })); setBookingError(""); }} /></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset>
+                      <legend>{t.contactDetails}</legend>
+                      <div className="booking-field-grid">
+                        <label><span>{t.fullName} *</span><input type="text" autoComplete="name" value={bookingForm.fullName} onChange={(event) => { setBookingForm((current) => ({ ...current, fullName: event.target.value })); setBookingError(""); }} required /></label>
+                        <label><span>{t.phone} *</span><input type="tel" inputMode="tel" autoComplete="tel" dir="ltr" placeholder="+965 5000 0000" value={bookingForm.phone} onChange={(event) => { setBookingForm((current) => ({ ...current, phone: event.target.value })); setBookingError(""); }} required /></label>
+                        <label className="booking-wide-field"><span>{t.emailOptional}</span><input type="email" inputMode="email" autoComplete="email" dir="ltr" placeholder="name@example.com" value={bookingForm.email} onChange={(event) => setBookingForm((current) => ({ ...current, email: event.target.value }))} /></label>
+                        <label className="booking-wide-field"><span>{t.specialRequests}</span><textarea rows={3} placeholder={t.specialPlaceholder} value={bookingForm.notes} onChange={(event) => setBookingForm((current) => ({ ...current, notes: event.target.value }))} /></label>
+                      </div>
+                    </fieldset>
+                  </div>
+
+                  <aside className="booking-summary">
+                    <h3>{t.bookingSummary}</h3>
+                    <dl>
+                      <div><dt>{t.stayLength}</dt><dd>{bookingNights || "—"} {bookingNights === 1 ? t.oneNight : t.nights}</dd></div>
+                      <div><dt>{t.totalGuests}</dt><dd>{bookingForm.adults + bookingForm.children} / {bookingListing.guests}</dd></div>
+                      <div><dt>{t.listedPrice}</dt><dd><b>{localized(bookingListing).priceLabel}</b><small>{localized(bookingListing).period}</small></dd></div>
+                      {bookingEstimate !== null && <div className="booking-estimate"><dt>{t.estimatedTotal}</dt><dd><b>{isArabic ? `${bookingEstimate.toLocaleString("ar-KW")} د.ك` : `KWD ${bookingEstimate.toLocaleString("en-US")}`}</b><small>{t.perStayEstimate}</small></dd></div>}
+                    </dl>
+                    <p className="booking-price-note">ⓘ {t.finalPriceNote}</p>
+                    <label className="booking-agreement"><input type="checkbox" checked={bookingForm.agreed} onChange={(event) => { setBookingForm((current) => ({ ...current, agreed: event.target.checked })); setBookingError(""); }} /><span>{t.agreement}</span></label>
+                    <p className="booking-privacy">⌁ {t.privacyNote}</p>
+                    {bookingError && <p className="booking-error" role="alert">! {bookingError}</p>}
+                    <button className="booking-submit" type="submit">{t.createRequest} <span aria-hidden="true">{t.arrow}</span></button>
+                  </aside>
+                </form>
+              </>
+            ) : (
+              <div className="booking-success" role="status">
+                <span className="booking-success-icon">✓</span>
+                <p className="eyebrow">{t.requestPrepared}</p>
+                <h2 id="booking-title">{t.bookingSuccess}</h2>
+                <p>{t.bookingSuccessText}</p>
+                <div className="booking-reference"><span>{t.bookingReference}</span><b dir="ltr">{bookingReference}</b></div>
+                <div className="booking-success-summary">
+                  <b>{localized(bookingListing).title}</b>
+                  <span>{bookingForm.arrival} — {bookingForm.departure}</span>
+                  <span>{t.totalGuests}: {bookingForm.adults + bookingForm.children}</span>
+                </div>
+                <div className="booking-success-actions">
+                  <button onClick={copyBookingSummary}>{t.copyRequest}</button>
+                  <a href={bookingListing.sourceUrl} target="_blank" rel="noreferrer">{t.continueSource}</a>
+                  <button className="quiet" onClick={() => setBookingListing(null)}>{t.closeRequest}</button>
+                </div>
+              </div>
+            )}
           </section>
         </div>
       )}
