@@ -4,6 +4,10 @@ A bilingual Arabic/English marketplace experience for discovering and comparing 
 
 واجهة ثنائية اللغة لاكتشاف إعلانات تأجير الشاليهات في الكويت، تصفيتها، حفظها ومقارنتها مع الرجوع إلى المصدر الأصلي.
 
+## Live site | الموقع المنشور
+
+https://q8-ux.github.io/kuwait-chalets/
+
 ## Features | المزايا
 
 - Arabic/English interface with automatic RTL/LTR layout
@@ -38,6 +42,4 @@ The static output is generated in `pages-dist/` with the `/kuwait-chalets/` base
 
 ## Deployment
 
-Pushes to `main` trigger `.github/workflows/pages.yml`, which builds the static Vite entry and deploys it to GitHub Pages.
-
-Expected public URL: `https://q8-ux.github.io/kuwait-chalets/`
+GitHub Pages is served from the `gh-pages` branch. To publish an update, build locally with `npm run build:pages` and replace the branch contents with the generated `pages-dist/` files.
