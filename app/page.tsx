@@ -482,10 +482,10 @@ const ui = {
     emptyTitle: "لا توجد نتائج مطابقة", emptyText: "جرّب رفع السعر أو إزالة بعض المرشحات.", approximateMap: "توزيع تقريبي للإعلانات حسب مناطق الكويت", open: "فتح", price: "سعر", mapDisclaimer: "مواقع تقريبية حسب المنطقة — راجع الموقع الدقيق في المصدر", mapListings: "الإعلانات على الخريطة",
     trust1: "مصدر واضح", trust1Text: "كل بطاقة تقود إلى الإعلان الأصلي.", trust2: "سعر بشارة ثقة", trust2Text: "نميّز السعر الموثق عن الذي يحتاج تأكيدًا.", trust3: "لا حجوزات وهمية", trust3Text: "لا نجمع عربونًا ولا ندّعي توفرًا لحظيًا.",
     owners: "لأصحاب الشاليهات", ownerHeading: "خلّ إعلانك أوضح… وحجوزاتك أسهل", ownerText: "واجهة احترافية، تقويم توافر، تسعير المواسم، وسياسة حجز واضحة.", ownerSteps: "اعرف خطوات الإضافة",
-    independent: "دليل مستقل لاستكشاف شاليهات الكويت.", listings: "الإعلانات", advertisers: "للمعلنين", disclaimer: "موج لا يملك الإعلانات المعروضة ولا يضمن التوفر. الصور تعبيرية، والمعلومات مختصرة من صفحات عامة مع رابط المصدر. تحقق قبل الدفع.", madeFor: "صُمم للكويت 🇰🇼",
+    independent: "دليل مستقل لاستكشاف شاليهات الكويت.", listings: "الإعلانات", advertisers: "للمعلنين", disclaimer: "شاليهنا لا يملك الإعلانات المعروضة ولا يضمن التوفر. الصور تعبيرية، والمعلومات مختصرة من صفحات عامة مع رابط المصدر. تحقق قبل الدفع.", madeFor: "صُمم للكويت 🇰🇼",
     modalImage: "صورة تعبيرية لشاليه ساحلي", modalImageNote: "صورة تعبيرية وليست صورة الإعلان", reviewedOn: "راجعناه", mentionedAmenities: "المزايا المذكورة", source: "المصدر", sourceCaveat: "قد تختلف الأسعار والتوافر والشروط عند فتح المصدر.", openOriginal: "فتح الإعلان الأصلي ↗", close: "إغلاق",
     compareList: "قائمة المقارنة", removeCompare: "إزالة من المقارنة", ofThree: "من 3", chooseAnother: "اختر شاليهًا آخر", readyCompare: "جاهزة للمقارنة", compareNow: "قارن الآن", clear: "مسح", compareEyebrow: "قرار أسرع وأوضح", compareHeading: "قارن الشاليهات جنبًا إلى جنب", compareIntro: "المعلومات أدناه مختصرة من الإعلانات العامة؛ افتح المصدر قبل اتخاذ قرار الحجز.", chalet: "الشاليه", displayedPrice: "السعر المعلن", roomsBaths: "الغرف / الحمامات", capacity: "الاستيعاب", poolSea: "مسبح / بحر",
-    launch: "نسخة إطلاق تجريبية", ownerEyebrow: "إضافة إعلان موثوق", ownerModalHeading: "جهّز شاليهك للعرض على موج", ownerModalText: "نحتاج بيانات واضحة تمنح المستأجر ثقة أكبر. لا يوجد استقبال طلبات آلي في هذه النسخة بعد.", ownership: "إثبات الملكية أو التفويض", ownershipText: "لحماية الضيوف ومنع الإعلانات المنسوخة.", photos: "صور أصلية ومواصفات دقيقة", photosText: "السعة، الغرف، المرافق وقواعد الاستخدام.", calendar: "أسعار وتقويم وسياسة إلغاء", calendarText: "لإظهار السعر الحقيقي قبل دفع العربون.", previewListing: "استعرض شكل الإعلان",
+    launch: "نسخة إطلاق تجريبية", ownerEyebrow: "إضافة إعلان موثوق", ownerModalHeading: "جهّز شاليهك للعرض على شاليهنا", ownerModalText: "نحتاج بيانات واضحة تمنح المستأجر ثقة أكبر. لا يوجد استقبال طلبات آلي في هذه النسخة بعد.", ownership: "إثبات الملكية أو التفويض", ownershipText: "لحماية الضيوف ومنع الإعلانات المنسوخة.", photos: "صور أصلية ومواصفات دقيقة", photosText: "السعة، الغرف، المرافق وقواعد الاستخدام.", calendar: "أسعار وتقويم وسياسة إلغاء", calendarText: "لإظهار السعر الحقيقي قبل دفع العربون.", previewListing: "استعرض شكل الإعلان",
     bookNow: "احجز الآن", bookingEyebrow: "طلب حجز آمن", bookingHeading: "أكمل بيانات إقامتك", bookingIntro: "أنشئ طلب توافر متكامل ثم تابع التأكيد مع المصدر الأصلي. لا يتم تحصيل أي مبلغ هنا.", bookingSteps: "التواريخ · الضيوف · التواصل", stayDetails: "تفاصيل الإقامة", contactDetails: "بيانات التواصل", checkIn: "تاريخ الوصول", checkOut: "تاريخ المغادرة", adults: "البالغون", children: "الأطفال", maxCapacity: "الحد الأقصى", fullName: "الاسم الكامل", phone: "رقم الهاتف", emailOptional: "البريد الإلكتروني (اختياري)", specialRequests: "طلبات خاصة (اختياري)", specialPlaceholder: "مثال: سرير طفل، وقت وصول متأخر أو مناسبة عائلية", bookingSummary: "ملخص الطلب", stayLength: "مدة الإقامة", nights: "ليالٍ", oneNight: "ليلة", listedPrice: "السعر المعلن", estimatedTotal: "تقدير الإقامة", finalPriceNote: "السعر النهائي والتوفر يؤكدهما المعلن قبل الدفع.", privacyNote: "بياناتك لا تُحفظ على الموقع ولا تُرسل لأي طرف في هذه الخطوة.", agreement: "أوافق على مراجعة السعر والتوفر وهوية المعلن والعقد وسياسة الإلغاء قبل دفع أي عربون.", createRequest: "إنشاء طلب الحجز", dateError: "اختر تاريخ مغادرة بعد تاريخ الوصول.", capacityError: "عدد الضيوف يتجاوز سعة هذا الشاليه.", requiredError: "أكمل الحقول المطلوبة ووافق على تعليمات الحجز.", bookingSuccess: "تم تجهيز طلبك", bookingSuccessText: "هذا الطلب غير مؤكد بعد. استخدم المرجع أدناه وتابع مع المصدر الأصلي للتحقق من التوفر والسعر.", bookingReference: "مرجع الطلب", copyRequest: "نسخ ملخص الطلب", copied: "تم نسخ ملخص الطلب", continueSource: "متابعة التأكيد مع المصدر ↗", closeRequest: "إغلاق الطلب", requestPrepared: "تم تجهيز طلب الحجز", noPayment: "لا دفع الآن", perStayEstimate: "تقديري بحسب عدد الليالي", totalGuests: "إجمالي الضيوف",
     saved: "حُفظ في المفضلة", removed: "أزيل من المفضلة", compareLimit: "يمكنك مقارنة 3 شاليهات كحد أقصى", addAnother: "أضف شاليهًا آخر لبدء المقارنة", addedCompare: "أُضيف إلى المقارنة",
   },
@@ -503,10 +503,10 @@ const ui = {
     emptyTitle: "No matching results", emptyText: "Try raising the price limit or removing some filters.", approximateMap: "Approximate listing distribution across Kuwait", open: "Open", price: "Price", mapDisclaimer: "Approximate region-level locations — confirm the exact location at the source", mapListings: "Listings on the map",
     trust1: "Clear source", trust1Text: "Every card links to the original listing.", trust2: "Price confidence", trust2Text: "We distinguish sourced prices from those needing confirmation.", trust3: "No fake bookings", trust3Text: "We do not collect deposits or claim live availability.",
     owners: "For chalet owners", ownerHeading: "Make your listing clearer — and booking easier", ownerText: "A professional page, availability calendar, seasonal pricing and transparent booking terms.", ownerSteps: "See listing steps",
-    independent: "An independent guide to discovering Kuwait chalets.", listings: "Listings", advertisers: "For advertisers", disclaimer: "Mawj does not own these listings or guarantee availability. Images are illustrative and details are summarized from public pages with source links. Verify before paying.", madeFor: "Made for Kuwait 🇰🇼",
+    independent: "An independent guide to discovering Kuwait chalets.", listings: "Listings", advertisers: "For advertisers", disclaimer: "Shalehna does not own these listings or guarantee availability. Images are illustrative and details are summarized from public pages with source links. Verify before paying.", madeFor: "Made for Kuwait 🇰🇼",
     modalImage: "Illustrative coastal chalet", modalImageNote: "Illustrative image — not the listing’s photo", reviewedOn: "reviewed", mentionedAmenities: "Listed amenities", source: "Source", sourceCaveat: "Prices, availability and conditions may differ when you open the source.", openOriginal: "Open original listing ↗", close: "Close",
     compareList: "Comparison list", removeCompare: "Remove from comparison", ofThree: "of 3", chooseAnother: "Choose another chalet", readyCompare: "Ready to compare", compareNow: "Compare now", clear: "Clear", compareEyebrow: "A faster, clearer decision", compareHeading: "Compare chalets side by side", compareIntro: "The information below is summarized from public listings; open the source before booking.", chalet: "Chalet", displayedPrice: "Listed price", roomsBaths: "Rooms / baths", capacity: "Capacity", poolSea: "Pool / sea",
-    launch: "Launch preview", ownerEyebrow: "Add a trusted listing", ownerModalHeading: "Prepare your chalet for Mawj", ownerModalText: "Clear details build guest confidence. Automated listing submissions are not enabled in this preview yet.", ownership: "Ownership or authorization proof", ownershipText: "Protects guests and prevents copied listings.", photos: "Original photos and accurate details", photosText: "Capacity, rooms, amenities and house rules.", calendar: "Pricing, calendar and cancellation", calendarText: "Shows the real price before any deposit is paid.", previewListing: "Preview a listing",
+    launch: "Launch preview", ownerEyebrow: "Add a trusted listing", ownerModalHeading: "Prepare your chalet for Shalehna", ownerModalText: "Clear details build guest confidence. Automated listing submissions are not enabled in this preview yet.", ownership: "Ownership or authorization proof", ownershipText: "Protects guests and prevents copied listings.", photos: "Original photos and accurate details", photosText: "Capacity, rooms, amenities and house rules.", calendar: "Pricing, calendar and cancellation", calendarText: "Shows the real price before any deposit is paid.", previewListing: "Preview a listing",
     bookNow: "Book now", bookingEyebrow: "Safe booking request", bookingHeading: "Complete your stay details", bookingIntro: "Create a complete availability request, then confirm it with the original source. No payment is collected here.", bookingSteps: "Dates · guests · contact", stayDetails: "Stay details", contactDetails: "Contact details", checkIn: "Check-in date", checkOut: "Check-out date", adults: "Adults", children: "Children", maxCapacity: "Maximum capacity", fullName: "Full name", phone: "Phone number", emailOptional: "Email (optional)", specialRequests: "Special requests (optional)", specialPlaceholder: "Example: baby cot, late arrival or family occasion", bookingSummary: "Request summary", stayLength: "Stay length", nights: "nights", oneNight: "night", listedPrice: "Listed price", estimatedTotal: "Stay estimate", finalPriceNote: "The advertiser confirms final price and availability before payment.", privacyNote: "Your details are not stored on this site or sent to any party at this step.", agreement: "I agree to verify the price, availability, advertiser identity, contract and cancellation policy before paying any deposit.", createRequest: "Create booking request", dateError: "Choose a check-out date after check-in.", capacityError: "The guest count exceeds this chalet’s capacity.", requiredError: "Complete the required fields and accept the booking guidance.", bookingSuccess: "Your request is ready", bookingSuccessText: "This booking is not confirmed yet. Use the reference below and continue with the original source to verify availability and price.", bookingReference: "Request reference", copyRequest: "Copy request summary", copied: "Request summary copied", continueSource: "Continue with source ↗", closeRequest: "Close request", requestPrepared: "Booking request prepared", noPayment: "No payment now", perStayEstimate: "Estimated by number of nights", totalGuests: "Total guests",
     saved: "Saved to favorites", removed: "Removed from favorites", compareLimit: "You can compare up to 3 chalets", addAnother: "Add another chalet to start comparing", addedCompare: "Added to comparison",
   },
@@ -550,17 +550,17 @@ export default function Home() {
   } : listingEnglish[listing.id];
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("mawj-favorites");
+    const saved = window.localStorage.getItem("shalehna-favorites");
     if (saved) setFavorites(JSON.parse(saved));
-    const savedLanguage = window.localStorage.getItem("mawj-language");
+    const savedLanguage = window.localStorage.getItem("shalehna-language");
     if (savedLanguage === "en") setLanguage("en");
   }, []);
 
   useEffect(() => {
     document.documentElement.lang = language;
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
-    document.title = isArabic ? "موج | شاليهات الكويت" : "Mawj | Kuwait Chalets";
-    window.localStorage.setItem("mawj-language", language);
+    document.title = isArabic ? "شاليهنا | شاليهات الكويت" : "Shalehna | Kuwait Chalets";
+    window.localStorage.setItem("shalehna-language", language);
   }, [language, isArabic]);
 
   useEffect(() => {
@@ -632,7 +632,7 @@ export default function Home() {
       const next = current.includes(id)
         ? current.filter((item) => item !== id)
         : [...current, id];
-      window.localStorage.setItem("mawj-favorites", JSON.stringify(next));
+      window.localStorage.setItem("shalehna-favorites", JSON.stringify(next));
       setToast(current.includes(id) ? t.removed : t.saved);
       return next;
     });
@@ -679,7 +679,7 @@ export default function Home() {
       return;
     }
     setBookingError("");
-    setBookingReference(`MWJ-${bookingListing.id}-${Date.now().toString(36).slice(-6).toUpperCase()}`);
+    setBookingReference(`SHL-${bookingListing.id}-${Date.now().toString(36).slice(-6).toUpperCase()}`);
   };
 
   const bookingSummaryText = bookingListing ? [
@@ -707,10 +707,10 @@ export default function Home() {
   return (
     <main lang={language}>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label={isArabic ? "موج — الرئيسية" : "Mawj — Home"}>
-          <span className="brand-mark" aria-hidden="true">م</span>
+        <a className="brand" href="#top" aria-label={isArabic ? "شاليهنا — الرئيسية" : "Shalehna — Home"}>
+          <span className="brand-mark" aria-hidden="true">ش</span>
           <span>
-            <strong>{isArabic ? "موج" : "Mawj"}</strong>
+            <strong>{isArabic ? "شاليهنا" : "Shalehna"}</strong>
             <small>{t.brandSub}</small>
           </span>
         </a>
@@ -940,10 +940,10 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><span className="brand-mark">م</span><div><b>{isArabic ? "موج" : "Mawj"}</b><p>{t.independent}</p></div></div>
+        <div className="footer-brand"><span className="brand-mark">ش</span><div><b>{isArabic ? "شاليهنا" : "Shalehna"}</b><p>{t.independent}</p></div></div>
         <div className="footer-links"><a href="#results">{t.listings}</a><a href="#trust">{t.safetyGuide}</a><a href="#owners">{t.advertisers}</a></div>
         <p className="disclaimer">{t.disclaimer}</p>
-        <div className="footer-bottom"><span>© 2026 {isArabic ? "موج" : "Mawj"}</span><span>{t.madeFor}</span></div>
+        <div className="footer-bottom"><span>© 2026 {isArabic ? "شاليهنا" : "Shalehna"}</span><span>{t.madeFor}</span></div>
       </footer>
 
       {selected && (
