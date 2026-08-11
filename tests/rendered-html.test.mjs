@@ -40,6 +40,10 @@ test("keeps the reviewed Arabic chalet copy", async () => {
   );
 
   assert.match(pageSource, /title: "شاليه الكوخ الخشبي"/);
+  assert.match(
+    pageSource,
+    /<h3 lang=\{isArabic \? "ar" : "en"\}>\{item\.title\}<\/h3>/,
+  );
   assert.doesNotMatch(
     pageSource,
     /الكوج|سعر بشارة ثقة|السعر يحتاج تأكيد|حسب التوفر/,
