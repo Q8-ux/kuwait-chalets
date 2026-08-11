@@ -1,4 +1,4 @@
-# Mawj — Kuwait Chalets | موج — شاليهات الكويت
+# Shalehna — Kuwait Chalets | شاليهنا — شاليهات الكويت
 
 A bilingual Arabic/English marketplace experience for discovering and comparing public chalet rental listings across Kuwait.
 
