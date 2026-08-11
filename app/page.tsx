@@ -18,8 +18,8 @@ type Listing = {
   source: string;
   sourceUrl: string;
   checked: string;
-  confidence: "موثّق المصدر" | "السعر يحتاج تأكيد";
-  category: "يومي" | "أسبوعي" | "شهري" | "حسب التوفر";
+  confidence: "موثّق المصدر" | "السعر يحتاج إلى تأكيد";
+  category: "يومي" | "أسبوعي" | "شهري" | "حسب التوافر";
   description: string;
   amenities: string[];
   pool: boolean;
@@ -55,7 +55,7 @@ const emptyBookingForm: BookingForm = {
 const listings: Listing[] = [
   {
     id: 1,
-    title: "شاليه الكوخ الخشبي — Seaside",
+    title: "شاليه الكوخ الخشبي",
     area: "الخيران",
     place: "صباح الأحمد البحرية",
     price: 100,
@@ -97,8 +97,8 @@ const listings: Listing[] = [
     confidence: "موثّق المصدر",
     category: "يومي",
     description:
-      "ست غرف ماستر، صالتان، مطبخ مجهز، مسبح كبير ومسبح أطفال وحديقة مع ألعاب.",
-    amenities: ["6 غرف ماستر", "مسبح أطفال", "حديقة", "ألعاب أطفال", "مطبخ مجهز"],
+      "ست غرف رئيسية، وصالتان، ومطبخ مجهز، ومسبح كبير، ومسبح للأطفال، وحديقة مع ألعاب.",
+    amenities: ["6 غرف رئيسية", "مسبح أطفال", "حديقة", "ألعاب أطفال", "مطبخ مجهز"],
     pool: true,
     sea: false,
     family: true,
@@ -119,7 +119,7 @@ const listings: Listing[] = [
     source: "إعلانات الكويت",
     sourceUrl: "https://q8rupee.com/info-17241.html",
     checked: "11 أغسطس 2026",
-    confidence: "السعر يحتاج تأكيد",
+    confidence: "السعر يحتاج إلى تأكيد",
     category: "يومي",
     description:
       "شاليه مؤثث من دورين مع حديقة ومسبح داخلي مدفأ وديوانية وثلاث صالات.",
@@ -143,11 +143,11 @@ const listings: Listing[] = [
     source: "إعلانات الكويت",
     sourceUrl: "https://q8rupee.com/info-40519.html",
     checked: "11 أغسطس 2026",
-    confidence: "السعر يحتاج تأكيد",
+    confidence: "السعر يحتاج إلى تأكيد",
     category: "أسبوعي",
     description:
-      "ثلاثة أدوار، أربع غرف، ثلاث صالات وبلكونة مطلة من جهة البحر مع تكييف مركزي.",
-    amenities: ["قرب البحر", "بلكونة", "3 صالات", "مطبخ", "تكييف مركزي"],
+      "ثلاثة طوابق، وأربع غرف، وثلاث صالات، وشرفة مطلة على البحر، مع تكييف مركزي.",
+    amenities: ["قرب البحر", "شرفة", "3 صالات", "مطبخ", "تكييف مركزي"],
     pool: false,
     sea: true,
     family: false,
@@ -159,7 +159,7 @@ const listings: Listing[] = [
     place: "المرحلة الثالثة — طريق 278",
     price: 600,
     priceLabel: "600 د.ك",
-    period: "منتصف/نهاية الأسبوع",
+    period: "منتصف الأسبوع أو نهايته",
     rooms: 8,
     baths: 9,
     guests: 20,
@@ -170,8 +170,8 @@ const listings: Listing[] = [
     confidence: "موثّق المصدر",
     category: "أسبوعي",
     description:
-      "واجهة بحرية عريضة، سبع غرف ماستر، ديوانية ومسبح على البحر مع تدفئة وشلال.",
-    amenities: ["صف أول", "مسبح مدفأ", "7 غرف ماستر", "ديوانية", "حراسة"],
+      "واجهة بحرية عريضة، وسبع غرف رئيسية، وديوانية، ومسبح على البحر مزود بالتدفئة وشلال.",
+    amenities: ["صف أول", "مسبح مدفأ", "7 غرف رئيسية", "ديوانية", "حراسة"],
     pool: true,
     sea: true,
     family: true,
@@ -194,10 +194,10 @@ const listings: Listing[] = [
       "https://sakan.co/ar/holiday/details/1150--%D9%83%D8%B1%D9%81%D8%A7%D9%86-%D9%81%D9%8A-%D8%A7%D9%84%D8%AE%D9%8A%D8%B1%D8%A7%D9%86-",
     checked: "11 أغسطس 2026",
     confidence: "موثّق المصدر",
-    category: "حسب التوفر",
+    category: "حسب التوافر",
     description:
-      "كرفان ومرافق ترفيهية للرحلات والفعاليات، خيمة ملكية، ألعاب، كاياك ومسبح مغطى.",
-    amenities: ["حتى 60 ضيفًا", "خيمة ملكية", "كاياك", "مسبح مغطى", "ألعاب"],
+      "كرفان ومرافق ترفيهية للرحلات والفعاليات، وخيمة ملكية، وألعاب، وقوارب كاياك، ومسبح مغطى.",
+    amenities: ["حتى 60 ضيفًا", "خيمة ملكية", "قوارب كاياك", "مسبح مغطى", "ألعاب"],
     pool: true,
     sea: true,
     family: false,
@@ -219,9 +219,9 @@ const listings: Listing[] = [
       "https://sakan.co/ar/holiday/details/1816-%D8%B4%D8%A7%D9%84%D9%8A%D9%87-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%81%D9%8A-%D8%B5%D8%A8%D8%A7%D8%AD-%D8%A7%D9%84%D8%A7%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%87",
     checked: "11 أغسطس 2026",
     confidence: "موثّق المصدر",
-    category: "حسب التوفر",
+    category: "حسب التوافر",
     description:
-      "شاليه صف أول بمساحة 450 م²، ثماني غرف واثنا عشر حمامًا وطاقة استيعاب كبيرة.",
+      "شاليه في الصف الأول بمساحة 450 م²، يضم ثماني غرف واثني عشر حمامًا، ويتسع لمجموعة كبيرة.",
     amenities: ["صف أول", "450 م²", "8 غرف", "12 حمامًا", "للمجموعات"],
     pool: true,
     sea: true,
@@ -233,8 +233,8 @@ const listings: Listing[] = [
     area: "بنيدر",
     place: "بنيدر — واجهة بحرية",
     price: null,
-    priceLabel: "تواصل للسعر",
-    period: "حسب التوفر",
+    priceLabel: "تواصل لمعرفة السعر",
+    period: "حسب التوافر",
     rooms: 6,
     baths: 8,
     guests: 18,
@@ -243,11 +243,11 @@ const listings: Listing[] = [
     sourceUrl:
       "https://awwadrealestate.com/316965-%D8%B4%D8%A7%D9%84%D9%8A%D9%87-%D9%84%D9%84%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1-%D9%81%D9%8A-%D8%A8%D9%86%D9%8A%D8%AF%D8%B1/",
     checked: "11 أغسطس 2026",
-    confidence: "السعر يحتاج تأكيد",
-    category: "حسب التوفر",
+    confidence: "السعر يحتاج إلى تأكيد",
+    category: "حسب التوافر",
     description:
-      "شاليه حديث من دورين ونصف، ست غرف ماستر، مسبح داخلي وخارجي ومواقف خاصة.",
-    amenities: ["على البحر", "6 غرف ماستر", "مسبحان", "مطبخ مجهز", "مواقف"],
+      "شاليه حديث من طابقين ونصف، يضم ست غرف رئيسية، ومسبحين أحدهما داخلي والآخر خارجي، ومواقف خاصة.",
+    amenities: ["على البحر", "6 غرف رئيسية", "مسبحان", "مطبخ مجهز", "مواقف"],
     pool: true,
     sea: true,
     family: false,
@@ -270,7 +270,7 @@ const listings: Listing[] = [
     checked: "11 أغسطس 2026",
     confidence: "موثّق المصدر",
     category: "يومي",
-    description: "إعلان شاليه بواجهة بحرية ومسبح خاص ومطبخ مجهز.",
+    description: "إعلان عن شاليه بواجهة بحرية، ومسبح خاص، ومطبخ مجهز.",
     amenities: ["واجهة بحرية", "مسبح خاص", "مطبخ مجهز", "حجز ليلي"],
     pool: true,
     sea: true,
@@ -291,7 +291,7 @@ const listings: Listing[] = [
     source: "4Sale",
     sourceUrl: "https://www.q84sale.com/ar/listing/chalet-for-rent-20600356",
     checked: "11 أغسطس 2026",
-    confidence: "السعر يحتاج تأكيد",
+    confidence: "السعر يحتاج إلى تأكيد",
     category: "شهري",
     description:
       "شاليه على البحر مباشرة بمساحة 825 م²، مسبح، واي فاي وتكييف مركزي.",
@@ -316,10 +316,10 @@ const listings: Listing[] = [
     sourceUrl: "https://www.booking.com/hotel/kw/a2-chalet-como.html",
     checked: "11 أغسطس 2026",
     confidence: "موثّق المصدر",
-    category: "حسب التوفر",
+    category: "حسب التوافر",
     description:
-      "شاليه واسع بمطبخ خاص، شرفة، إطلالة مسبح وفناء، شواء وواي فاي.",
-    amenities: ["4 غرف", "مطبخ خاص", "إطلالة مسبح", "شواء", "واي فاي"],
+      "شاليه واسع يضم مطبخًا خاصًا، وشرفة مطلة على المسبح، وفناءً، ومنطقة شواء، وخدمة واي فاي.",
+    amenities: ["4 غرف", "مطبخ خاص", "إطلالة على المسبح", "منطقة شواء", "واي فاي"],
     pool: true,
     sea: false,
     family: true,
@@ -339,11 +339,11 @@ const listings: Listing[] = [
     source: "القلعة العقارية",
     sourceUrl: "https://alqalaa.com.kw/product/chalet4rentinkhayran/",
     checked: "11 أغسطس 2026",
-    confidence: "السعر يحتاج تأكيد",
+    confidence: "السعر يحتاج إلى تأكيد",
     category: "شهري",
     description:
-      "ثلاثة أدوار، ست غرف وثلاث غرف ماستر، خصوصية كاملة ومسبح على البحر.",
-    amenities: ["إيجار شهري", "3 أدوار", "مسبح", "على البحر", "خصوصية"],
+      "ثلاثة طوابق، وست غرف، منها ثلاث غرف رئيسية، مع خصوصية كاملة ومسبح على البحر.",
+    amenities: ["إيجار شهري", "3 طوابق", "مسبح", "على البحر", "خصوصية"],
     pool: true,
     sea: true,
     family: true,
@@ -475,18 +475,18 @@ const ui = {
     heroText: "قارن شاليهات الكويت، راجع السعر من مصدره، واحجز وأنت تعرف كل التفاصيل.", curated: "إعلانًا منسقًا", areas: "مناطق", sourceLinks: "روابط مصدر", expressive: "الصورة تعبيرية",
     destination: "الوجهة", arrival: "الوصول", departure: "المغادرة", guests: "الضيوف", upTo4: "حتى 4 ضيوف", upTo8: "حتى 8 ضيوف", upTo12: "حتى 12 ضيفًا", upTo20: "حتى 20 ضيفًا", search: "ابحث",
     popular: "الأكثر بحثًا", eyebrow: "اكتشف إقامتك القادمة", heading: "شاليهات مختارة في الكويت", priceCaveat: "الأسعار كما ظهرت في المصدر، وقد تتغير حسب التاريخ والمناسبة.", list: "القائمة", map: "الخريطة",
-    searchPlaceholder: "ابحث باسم الشاليه أو الميزة", filters: "الفلاتر", sort: "ترتيب:", featured: "المميزة أولًا", low: "السعر: الأقل", high: "السعر: الأعلى", mostRooms: "الأكثر غرفًا",
+    searchPlaceholder: "ابحث باسم الشاليه أو الميزة", filters: "الفلاتر", sort: "الترتيب:", featured: "المميزة أولًا", low: "السعر: الأقل", high: "السعر: الأعلى", mostRooms: "الأكثر غرفًا",
     filterResults: "تصفية النتائج", clearAll: "مسح الكل", area: "المنطقة", maxPrice: "أعلى سعر معلن", includesUnknown: "يشمل الأسعار غير المحددة", amenities: "المزايا", privatePool: "مسبح خاص", onSea: "على البحر", families: "للعائلات",
     beforeDeposit: "قبل دفع العربون", depositAdvice: "طابق اسم المعلن، عقد الإيجار، وسياسة الاسترداد في المصدر الأصلي.", result: "نتيجة مطابقة", favoritesOnly: "المفضلة فقط", reviewed: "آخر مراجعة للمصادر: 11 أغسطس 2026",
-    illustrativeFor: "صورة تعبيرية لفئة", verified: "موثّق المصدر", confirmPrice: "السعر يحتاج تأكيد", removeFavorite: "إزالة من المفضلة", saveFavorite: "حفظ في المفضلة", room: "غرف", bath: "حمامات", upTo: "حتى", guest: "ضيفًا", compareAdd: "أضف للمقارنة", compareAdded: "مضاف للمقارنة", details: "عرض التفاصيل", arrow: "←",
+    illustrativeFor: "صورة تعبيرية لفئة", verified: "موثّق المصدر", confirmPrice: "السعر يحتاج إلى تأكيد", removeFavorite: "إزالة من المفضلة", saveFavorite: "حفظ في المفضلة", room: "غرف", bath: "حمامات", upTo: "حتى", guest: "ضيفًا", compareAdd: "أضف للمقارنة", compareAdded: "مضاف للمقارنة", details: "عرض التفاصيل", arrow: "←",
     emptyTitle: "لا توجد نتائج مطابقة", emptyText: "جرّب رفع السعر أو إزالة بعض المرشحات.", approximateMap: "توزيع تقريبي للإعلانات حسب مناطق الكويت", open: "فتح", price: "سعر", mapDisclaimer: "مواقع تقريبية حسب المنطقة — راجع الموقع الدقيق في المصدر", mapListings: "الإعلانات على الخريطة",
-    trust1: "مصدر واضح", trust1Text: "كل بطاقة تقود إلى الإعلان الأصلي.", trust2: "سعر بشارة ثقة", trust2Text: "نميّز السعر الموثق عن الذي يحتاج تأكيدًا.", trust3: "لا حجوزات وهمية", trust3Text: "لا نجمع عربونًا ولا ندّعي توفرًا لحظيًا.",
-    owners: "لأصحاب الشاليهات", ownerHeading: "خلّ إعلانك أوضح… وحجوزاتك أسهل", ownerText: "واجهة احترافية، تقويم توافر، تسعير المواسم، وسياسة حجز واضحة.", ownerSteps: "اعرف خطوات الإضافة",
-    independent: "دليل مستقل لاستكشاف شاليهات الكويت.", listings: "الإعلانات", advertisers: "للمعلنين", disclaimer: "شاليهنا لا يملك الإعلانات المعروضة ولا يضمن التوفر. الصور تعبيرية، والمعلومات مختصرة من صفحات عامة مع رابط المصدر. تحقق قبل الدفع.", madeFor: "صُمم للكويت 🇰🇼",
-    modalImage: "صورة تعبيرية لشاليه ساحلي", modalImageNote: "صورة تعبيرية وليست صورة الإعلان", reviewedOn: "راجعناه", mentionedAmenities: "المزايا المذكورة", source: "المصدر", sourceCaveat: "قد تختلف الأسعار والتوافر والشروط عند فتح المصدر.", openOriginal: "فتح الإعلان الأصلي ↗", close: "إغلاق",
+    trust1: "مصدر واضح", trust1Text: "كل بطاقة تقود إلى الإعلان الأصلي.", trust2: "مؤشر ثقة للسعر", trust2Text: "نميّز السعر الموثّق من السعر الذي يحتاج إلى تأكيد.", trust3: "لا حجوزات وهمية", trust3Text: "لا نجمع عربونًا ولا ندّعي توافرًا لحظيًا.",
+    owners: "لأصحاب الشاليهات", ownerHeading: "اجعل إعلانك أوضح… وحجوزاتك أسهل", ownerText: "واجهة احترافية، وتقويم للتوافر، وتسعير موسمي، وسياسة حجز واضحة.", ownerSteps: "اعرف خطوات الإضافة",
+    independent: "دليل مستقل لاستكشاف شاليهات الكويت.", listings: "الإعلانات", advertisers: "للمعلنين", disclaimer: "شاليهنا لا يملك الإعلانات المعروضة ولا يضمن التوافر. الصور تعبيرية، والمعلومات مختصرة من صفحات عامة مع رابط المصدر. تحقق قبل الدفع.", madeFor: "صُمم للكويت 🇰🇼",
+    modalImage: "صورة تعبيرية لشاليه ساحلي", modalImageNote: "صورة تعبيرية وليست صورة الإعلان", reviewedOn: "تاريخ المراجعة:", mentionedAmenities: "المزايا المذكورة", source: "المصدر", sourceCaveat: "قد تختلف الأسعار والتوافر والشروط عند فتح المصدر.", openOriginal: "فتح الإعلان الأصلي ↗", close: "إغلاق",
     compareList: "قائمة المقارنة", removeCompare: "إزالة من المقارنة", ofThree: "من 3", chooseAnother: "اختر شاليهًا آخر", readyCompare: "جاهزة للمقارنة", compareNow: "قارن الآن", clear: "مسح", compareEyebrow: "قرار أسرع وأوضح", compareHeading: "قارن الشاليهات جنبًا إلى جنب", compareIntro: "المعلومات أدناه مختصرة من الإعلانات العامة؛ افتح المصدر قبل اتخاذ قرار الحجز.", chalet: "الشاليه", displayedPrice: "السعر المعلن", roomsBaths: "الغرف / الحمامات", capacity: "الاستيعاب", poolSea: "مسبح / بحر",
-    launch: "نسخة إطلاق تجريبية", ownerEyebrow: "إضافة إعلان موثوق", ownerModalHeading: "جهّز شاليهك للعرض على شاليهنا", ownerModalText: "نحتاج بيانات واضحة تمنح المستأجر ثقة أكبر. لا يوجد استقبال طلبات آلي في هذه النسخة بعد.", ownership: "إثبات الملكية أو التفويض", ownershipText: "لحماية الضيوف ومنع الإعلانات المنسوخة.", photos: "صور أصلية ومواصفات دقيقة", photosText: "السعة، الغرف، المرافق وقواعد الاستخدام.", calendar: "أسعار وتقويم وسياسة إلغاء", calendarText: "لإظهار السعر الحقيقي قبل دفع العربون.", previewListing: "استعرض شكل الإعلان",
-    bookNow: "احجز الآن", bookingEyebrow: "طلب حجز آمن", bookingHeading: "أكمل بيانات إقامتك", bookingIntro: "أنشئ طلب توافر متكامل ثم تابع التأكيد مع المصدر الأصلي. لا يتم تحصيل أي مبلغ هنا.", bookingSteps: "التواريخ · الضيوف · التواصل", stayDetails: "تفاصيل الإقامة", contactDetails: "بيانات التواصل", checkIn: "تاريخ الوصول", checkOut: "تاريخ المغادرة", adults: "البالغون", children: "الأطفال", maxCapacity: "الحد الأقصى", fullName: "الاسم الكامل", phone: "رقم الهاتف", emailOptional: "البريد الإلكتروني (اختياري)", specialRequests: "طلبات خاصة (اختياري)", specialPlaceholder: "مثال: سرير طفل، وقت وصول متأخر أو مناسبة عائلية", bookingSummary: "ملخص الطلب", stayLength: "مدة الإقامة", nights: "ليالٍ", oneNight: "ليلة", listedPrice: "السعر المعلن", estimatedTotal: "تقدير الإقامة", finalPriceNote: "السعر النهائي والتوفر يؤكدهما المعلن قبل الدفع.", privacyNote: "بياناتك لا تُحفظ على الموقع ولا تُرسل لأي طرف في هذه الخطوة.", agreement: "أوافق على مراجعة السعر والتوفر وهوية المعلن والعقد وسياسة الإلغاء قبل دفع أي عربون.", createRequest: "إنشاء طلب الحجز", dateError: "اختر تاريخ مغادرة بعد تاريخ الوصول.", capacityError: "عدد الضيوف يتجاوز سعة هذا الشاليه.", requiredError: "أكمل الحقول المطلوبة ووافق على تعليمات الحجز.", bookingSuccess: "تم تجهيز طلبك", bookingSuccessText: "هذا الطلب غير مؤكد بعد. استخدم المرجع أدناه وتابع مع المصدر الأصلي للتحقق من التوفر والسعر.", bookingReference: "مرجع الطلب", copyRequest: "نسخ ملخص الطلب", copied: "تم نسخ ملخص الطلب", continueSource: "متابعة التأكيد مع المصدر ↗", closeRequest: "إغلاق الطلب", requestPrepared: "تم تجهيز طلب الحجز", noPayment: "لا دفع الآن", perStayEstimate: "تقديري بحسب عدد الليالي", totalGuests: "إجمالي الضيوف",
+    launch: "نسخة إطلاق تجريبية", ownerEyebrow: "إضافة إعلان موثوق", ownerModalHeading: "جهّز شاليهك للعرض على شاليهنا", ownerModalText: "نحتاج إلى بيانات واضحة تمنح المستأجر ثقة أكبر. لا تُستقبل الطلبات آليًا في هذه النسخة بعد.", ownership: "إثبات الملكية أو التفويض", ownershipText: "لحماية الضيوف ومنع الإعلانات المنسوخة.", photos: "صور أصلية ومواصفات دقيقة", photosText: "السعة، والغرف، والمرافق، وقواعد الاستخدام.", calendar: "أسعار وتقويم وسياسة إلغاء", calendarText: "لإظهار السعر الحقيقي قبل دفع العربون.", previewListing: "استعرض شكل الإعلان",
+    bookNow: "احجز الآن", bookingEyebrow: "طلب حجز آمن", bookingHeading: "أكمل بيانات إقامتك", bookingIntro: "أنشئ طلبًا متكاملًا للتحقق من التوافر، ثم تابع التأكيد مع المصدر الأصلي. لا يتم تحصيل أي مبلغ هنا.", bookingSteps: "التواريخ · الضيوف · التواصل", stayDetails: "تفاصيل الإقامة", contactDetails: "بيانات التواصل", checkIn: "تاريخ الوصول", checkOut: "تاريخ المغادرة", adults: "البالغون", children: "الأطفال", maxCapacity: "الحد الأقصى", fullName: "الاسم الكامل", phone: "رقم الهاتف", emailOptional: "البريد الإلكتروني (اختياري)", specialRequests: "طلبات خاصة (اختياري)", specialPlaceholder: "مثال: سرير طفل، أو وقت وصول متأخر، أو مناسبة عائلية", bookingSummary: "ملخص الطلب", stayLength: "مدة الإقامة", nights: "ليالٍ", oneNight: "ليلة", listedPrice: "السعر المعلن", estimatedTotal: "تقدير الإقامة", finalPriceNote: "السعر النهائي والتوافر يؤكدهما المعلن قبل الدفع.", privacyNote: "بياناتك لا تُحفظ على الموقع ولا تُرسل إلى أي طرف في هذه الخطوة.", agreement: "أوافق على مراجعة السعر والتوافر وهوية المعلن والعقد وسياسة الإلغاء قبل دفع أي عربون.", createRequest: "إنشاء طلب الحجز", dateError: "اختر تاريخ مغادرة بعد تاريخ الوصول.", capacityError: "عدد الضيوف يتجاوز سعة هذا الشاليه.", requiredError: "أكمل الحقول المطلوبة ووافق على تعليمات الحجز.", bookingSuccess: "تم تجهيز طلبك", bookingSuccessText: "هذا الطلب غير مؤكد بعد. استخدم المرجع أدناه وتابع مع المصدر الأصلي للتحقق من التوافر والسعر.", bookingReference: "مرجع الطلب", copyRequest: "نسخ ملخص الطلب", copied: "تم نسخ ملخص الطلب", continueSource: "متابعة التأكيد مع المصدر ↗", closeRequest: "إغلاق الطلب", requestPrepared: "تم تجهيز طلب الحجز", noPayment: "لا دفع الآن", perStayEstimate: "تقدير حسب عدد الليالي", totalGuests: "إجمالي الضيوف",
     saved: "حُفظ في المفضلة", removed: "أزيل من المفضلة", compareLimit: "يمكنك مقارنة 3 شاليهات كحد أقصى", addAnother: "أضف شاليهًا آخر لبدء المقارنة", addedCompare: "أُضيف إلى المقارنة",
   },
   en: {
